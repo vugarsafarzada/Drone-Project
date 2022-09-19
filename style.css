@@ -1,0 +1,206 @@
+body {
+    margin: 0 auto;
+    padding: 0;
+    background-color: #137BF2;
+    overflow: hidden;
+}
+
+#screen {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div {
+    -webkit-transition: all 1.7s ease;
+    -moz-transition: all 1.7s ease;
+    -o-transition: all 1.7s ease;
+    transition: all 1.7s ease;
+}
+
+.bg-blue {
+    background-color: #137BF2;
+}
+
+.bg-white {
+    background-color: aliceblue;
+}
+
+#text-start {
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+
+/** DRONE PARTS **/
+
+#screen #drone-body {
+    width: 100px;
+    height: 50px;
+    background-color: aliceblue;
+    border-radius: 50px;
+    display: flex;
+    position: relative;
+}
+
+div.space {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+}
+
+div.space#center {
+    height: 65px;
+}
+
+div.space.bottom {
+    top: 25px;
+}
+
+div.space.top {
+    bottom: 10px;
+    border-radius: 50%;
+}
+
+div.space.left {
+    right: 21px;
+}
+
+div.space.right {
+    left: 21px;
+}
+
+div.arm {
+    position: absolute;
+    top: -14px;
+    width: 50px;
+    height: 15px;
+    background-color: aliceblue;
+}
+
+div.space.left .arm {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 20px;
+    right: 5px;
+    transform: rotate(9deg);
+}
+
+div.space.right .arm {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 20px;
+    left: 5px;
+    transform: rotate(-9deg);
+}
+
+div.fan-block {
+    position: relative;
+    bottom: 10px;
+    width: 12px;
+    border-radius: 10px;
+    margin: 3px;
+    background-color: aliceblue;
+}
+
+div.space.left .arm .fan-block {
+    float: left;
+    transform: rotate(-9deg);
+}
+
+div.space.right .arm .fan-block {
+    float: right;
+    transform: rotate(9deg);
+}
+
+div.fan-block-bottom {
+    position: relative;
+    top: 4.5px;
+    width: 3px;
+    height: 10px;
+    border-radius: 30px;
+    margin: 3px;
+    background-color: aliceblue;
+}
+
+div.space.left .arm .fan-block-bottom {
+    float: left;
+}
+
+div.space.right .arm .fan-block-bottom {
+    float: right;
+}
+
+div.fan-block-top {
+    position: relative;
+    bottom: 5px;
+    left: 3.2px;
+    width: 0;
+    height: 0;
+    border-radius: 1px;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-bottom: 7px solid aliceblue;
+}
+
+.diamond-narrow {
+    width: 0;
+    height: 0;
+    border-radius: 3px;
+    border: 25px solid transparent;
+    border-bottom: 3px solid aliceblue;
+    position: relative;
+    bottom: 22px;
+    right: 36px;
+    transform: rotate(2deg);
+}
+
+.diamond-narrow:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-radius: 3px;
+    border: 25px solid transparent;
+    border-top: 3px solid aliceblue;
+}
+
+div#center #drone-foot {
+    position: absolute;
+    left: -21px;
+    top: -5px;
+    width: 75px;
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    align-items: flex-end;
+}
+
+div#center .drone-foot-left {
+    width: 4px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: aliceblue;
+    transform: rotate(15deg);
+}
+
+div#center .drone-foot-right {
+    width: 4px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: aliceblue;
+    transform: rotate(-15deg);
+}
+
+div#center div#dots {
+    display: flex;
+    position: relative;
+    top: 30px;
+    left: 11px;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+}
